@@ -1,0 +1,5 @@
+db_host = '172.27.128.1'
+db_port = '5432'
+db_name = 'db_name'
+db_user = 'admin'
+db_password = 'mypassword'

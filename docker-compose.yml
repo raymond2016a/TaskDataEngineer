@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  sleek-airflow:
+    image: de-composer:latest
+    volumes:
+      - ./airflow:/opt/airflow
+    ports:
+      - "8080:8080"
+    command: airflow standalone
+
+  postgresql:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: db_name
+    ports:
+      - "5432:5432"
